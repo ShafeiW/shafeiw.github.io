@@ -1,9 +1,10 @@
 @font-face {
     font-family: 'Druk';
-    src: url('../styles/Compagnon-Bold.otf') format('otf');
-  }
-  
-  body {
+    src: url('../styles/Helmet-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
     font-family: 'Druk', sans-serif;
-  }
-  
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Druk';
+    src: url('../styles/Compagnon-Bold.otf') format('otf');
+  }
+  
+  body {
+    font-family: 'Druk', sans-serif;
+  }
+  

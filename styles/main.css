@@ -273,7 +273,7 @@ ul {
     max-width: 800px;
     padding: 1.5rem;
     text-align: left;
-    border-left: 4px solid #cc0000; /* Red left border for subtle styling */
+    /*border-left: 4px solid #cc0000; /* Red left border for subtle styling */
     background-color: #ffffff; /* Pure white background */
     border-radius: 12px; /* Rounded corners */
     padding-left: 1rem;

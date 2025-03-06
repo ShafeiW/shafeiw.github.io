@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1b3be1a0.css",
+    "main.js": "/static/js/main.b018e8c2.js",
+    "static/js/453.bd056ee0.chunk.js": "/static/js/453.bd056ee0.chunk.js",
+    "static/media/Helmet-Regular.ttf": "/static/media/Helmet-Regular.9071d15ccf55e71ad78d.ttf",
+    "index.html": "/index.html",
+    "static/media/github.svg": "/static/media/github.090d4e9b1ac474d68bb67ea987dc8b11.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.f55949650404e6994ec6f4b8bddf214b.svg",
+    "static/media/CurrencyRupee.svg": "/static/media/CurrencyRupee.4efd80a82f9e20e55e4f0173d309e0da.svg",
+    "static/media/mail.svg": "/static/media/mail.9d6ed13dd25e7ef51d6f7318e5c5f5cc.svg",
+    "main.1b3be1a0.css.map": "/static/css/main.1b3be1a0.css.map",
+    "main.b018e8c2.js.map": "/static/js/main.b018e8c2.js.map",
+    "453.bd056ee0.chunk.js.map": "/static/js/453.bd056ee0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b3be1a0.css",
+    "static/js/main.b018e8c2.js"
+  ]
+}

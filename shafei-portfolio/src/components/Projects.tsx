@@ -30,6 +30,11 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/ShafeiW/Canvas2Calendar"
     },
     {
+      title: "LeBron GPT",
+      description: "GPT-4o model fine-tuned on LeBron's tweets, allowing anyone to speak to the King. Built for DreamHacks2025",
+      githubUrl: "https://github.com/ShafeiW/LeBronGPT"
+    },
+    {
       title: "miXologist",
       description: "An interactive cocktail recommendation web application that allows users to generate custom cocktail recipes. Built for JourneyHacks2025",
       githubUrl: "https://github.com/ShafeiW/JourneyHacks-2025"

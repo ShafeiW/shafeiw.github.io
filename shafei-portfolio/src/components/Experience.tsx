@@ -5,7 +5,7 @@ interface ExperienceItem {
   title: string;
   company: string;
   period: string;
-  descriptions: string[];
+  descriptions: (string | JSX.Element)[];
 }
 
 const Experience: React.FC = () => {
@@ -23,6 +23,7 @@ const Experience: React.FC = () => {
       company: "PreMedTalk Blog",
       period: "Nov 2024 - Present",
       descriptions: [
+        <span key="premedtalk-url"><a href="https://www.premedtalk.com" target="_blank" rel="noopener noreferrer">www.premedtalk.com</a></span>,
         "Worked on a full-stack blogging platform built with Node.js and Express, incorporating rich text editing and saving blog content as HTML in MongoDB for flexible content management for pre-medical prospective students.",
         "Put emphasis on user experience by revamping the platform's design and implementing a UI for admin users.",
         "Collaborated with administrators to ensure that the platform's design aligned with overall club objectives, contributing to improved engagements and user experience."

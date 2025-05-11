@@ -5,7 +5,7 @@ interface ExperienceItem {
   title: string;
   company: string;
   period: string;
-  descriptions: (string | JSX.Element)[];
+  descriptions: (string | React.ReactNode)[];
 }
 
 const Experience: React.FC = () => {

@@ -213,7 +213,7 @@ body.no-scroll {
 // To use a background video on the home panel, uncomment this section.
 // This will place the video behind your content and give it a subtle dark overlay.
 */
-.home-panel .background-video {
+.background-video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -222,7 +222,15 @@ body.no-scroll {
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: 1;
-    /* filter: brightness(0.7); /* Removed this dark filter */
+    transition: opacity 1s ease-in-out;
+}
+
+#bg-video-2 {
+    opacity: 0;
+}
+
+.contact-panel .background-video {
+    /* filter: brightness(0.5); This was causing the dark film, it is now removed. */
 }
 
 /* Home Panel */

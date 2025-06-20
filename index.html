@@ -1,60 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShafeiW</title>
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/fonts.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shafei W. - Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="nav-bar">
-    <div class="logo">
-      <img src="images/CurrencyRupee.svg" alt="Logo" class="icon-style">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="experience.html">Experience</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="main-header">
+        <div class="header-content">
+            <a href="#home" class="logo-link"><div class="logo">SHAFEI WAQAR</div></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-nav">
+                <a href="https://github.com/ShafeiW" target="_blank">
+                    <img src="images/github.svg" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/shafei-waqar-215090295/" target="_blank">
+                    <img src="images/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="mailto:shafei.waqar@gmail.com">
+                    <img src="images/mail.svg" alt="Email">
+                </a>
+            </div>
+        </div>
+    </header>
 
-  <!-- Home Section -->
-  <section id="home" class="home-section">
-    <h1 class="tagline">Hi, I'm Shafei Waqar.</h1>
-    <p class="subtagline">Bsc. in Computer Science student at SFU.</p>
-  </section>
+    <main class="content-container">
+        <section id="home" class="panel home-panel">
+            
+            <video autoplay muted loop playsinline id="bg-video" class="background-video">
+                <source src="assets/background.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <div class="panel-content">
+                <h1 class="main-title">Hi, I'm Shafei</h1>
+                <p class="about-me-bio">A passionate developer and designer with a knack for creating intuitive and engaging digital experiences. Currently exploring the intersection of AI and Human Interaction.</p>
+                <div class="cta-buttons">
+                    <a href="resume.pdf" class="cta-button" download>Resume</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- Resume Section -->
-  <section id="resume">
-    <h1>Resume</h1>
-    <a href="resume.pdf" download class="btn">Download My Resume.</a>
-  </section>
+        <section id="projects" class="panel projects-panel">
+            <div class="panel-content">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>ExamQBot</h3>
+                        <p>An OpenAI API powered tool that takes in class notes and can generate exam questions and flashcards.</p>
+                        <a href="https://github.com/ShafeiW/ExamQBot" target="_blank" class="cta-button">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Review Analyzer</h3>
+                        <p>A deep learning-powered web application that performs sentiment analysis on Amazon product reviews using a fine-tuned BERT model.</p>
+                        <a href="https://github.com/ShafeiW/ReviewAnalyzer" target="_blank" class="cta-button">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Soundscape Mixer</h3>
+                        <p>Mobile app that lets you mix ambient sounds to create a personalized soundscape for relaxation, meditation, or focus.</p>
+                        <a href="https://github.com/ShafeiW/SoundscapeMixer" target="_blank" class="cta-button">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Canvas2Calendar</h3>
+                        <p>Python scripts that automatically sync your Canvas assignments with your Google Calendar.</p>
+                        <a href="https://github.com/ShafeiW/Canvas2Calendar" target="_blank" class="cta-button">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>miXologist</h3>
+                        <p>An interactive cocktail recommendation web application that allows users to generate custom cocktail recipes. Built for JourneyHacks2025. </p>
+                        <a href="https://github.com/ShafeiW/JourneyHacks-2025" target="_blank" class="cta-button">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>AviHavoc</h3>
+                        <p>Hackathon project built to display international flights and showcase the dangers of gas emissions.</p>
+                        <a href="https://github.com/junhecui/avihavoc" target="_blank" class="cta-button">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h1>Contact</h1>
-    <div class="contact-icons">
-      <a href="https://www.linkedin.com/in/shafei-waqar-215090295/" target="_blank">
-        <img src="images/linkedin.svg" alt="LinkedIn" class="icon-style">
-      </a>
-      <a href="https://github.com/ShafeiW" target="_blank">
-        <img src="images/github.svg" alt="GitHub" class="icon-style">
-      </a>
-      <a href="mailto:shafei.waqar@gmail.com">
-        <img src="images/mail.svg" alt="Email" class="icon-style">
-      </a>
-    </div>
-  </section>
+        <section id="experience" class="panel experience-panel">
+            <div class="panel-content">
+                <h2>Experience</h2>
+                <div class="experience-timeline">
+                    <div class="experience-entry">
+                        <h3>Design Executive</h3>
+                        <h4>SFU Cybersecurity | Feb 2025 - Present</h4>
+                        <p>Designed informative and unique instagram post templates using Figma, Canva and Photoshop to advertise for the club's CTF events.</p>
+                    </div>
+                    <div class="experience-entry">
+                        <h3>Software Developer</h3>
+                        <h4>PreMedTalk Blog | Nov 2024 - Present</h4>
+                        <p>Worked on a full-stack blogging platform built with Node.js and Express, incorporating rich text editing and saving blog content as HTML in MongoDB for flexible content management for pre-medical prospective students.</p>
+                    </div>
+                    <div class="experience-entry">
+                        <h3>Marketing Executive</h3>
+                        <h4>SFU Canadian Cancer Society | Sep 2023 - May 2024</h4>
+                        <p>Collaborated within a multidisciplinary team to design high-impact graphics and promotional materials, and produced a viral video campaign that achieved over 150,000 views.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© Shafei Waqar 2025. All Rights Reserved.</p>
-  </footer>
+        <section id="contact" class="panel contact-panel">
+            <div class="panel-content">
+                <h2>Contact</h2>
+                <p>Feel free to reach out. I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious team.</p>
+                <div class="contact-links">
+                    <a href="mailto:shafei.waqar@gmail.com" class="cta-button">Email</a>
+                    <a href="https://www.linkedin.com/in/shafei-waqar-215090295/" target="_blank" class="cta-button">LinkedIn</a>
+                    <a href="https://github.com/ShafeiW" target="_blank" class="cta-button">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <script src="scripts/main.js"></script>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 SHAFEI W. All rights reserved.</p>
+            <div class="social-links">
+                <!-- Social media links here -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
 </body>
-</html>
+</html> 

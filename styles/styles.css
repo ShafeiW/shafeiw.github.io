@@ -1,0 +1,315 @@
+@font-face {
+    font-family: 'Helmet';
+    src: url('Helmet-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Basic Setup */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #555555;
+    --background-color: #f4f4f4;
+    --panel-background: #ffffff;
+    --header-height: 80px;
+    --font-main: 'Inter', sans-serif;
+    --font-header: 'Helmet', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* This will be moved to the scrolling container */
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    overflow-x: hidden;
+}
+
+/* Header */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    position: relative;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: var(--font-header);
+}
+
+.main-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.main-nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--secondary-color);
+}
+
+.social-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-nav a {
+    display: inline-block;
+    height: 22px; /* Set a fixed height for the icons */
+}
+
+.social-nav img {
+    height: 100%;
+    width: auto;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+.social-nav a:hover img {
+    opacity: 1;
+}
+
+/* Main Content & Panels */
+.content-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+.panel {
+    scroll-snap-align: start;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.panel-content {
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+    position: relative;
+}
+
+/* 
+// To use a background video on the home panel, uncomment this section.
+// This will place the video behind your content and give it a subtle dark overlay.
+*/
+.home-panel .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* filter: brightness(0.7); /* Removed this dark filter */
+}
+
+/* Home Panel */
+.home-panel .main-title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-family: var(--font-header);
+}
+
+.about-me-bio {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--secondary-color);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: var(--panel-background);
+}
+
+
+/* Other Panels */
+.projects-panel, .experience-panel, .about-panel, .contact-panel {
+    background-color: var(--panel-background);
+}
+
+.panel h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-family: var(--font-header);
+}
+
+/* Projects Panel */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.project-card {
+    background: rgba(0, 0, 0, 0.03);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s ease, background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-family: var(--font-header);
+}
+
+.project-card p {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    flex-grow: 1; /* This makes the description take up available space */
+}
+
+
+/* Experience Panel */
+.experience-timeline {
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.experience-entry {
+    margin-bottom: 40px;
+    padding-left: 30px;
+    border-left: 2px solid #ccc;
+}
+
+.experience-entry h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-family: var(--font-header);
+}
+
+.experience-entry h4 {
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Contact Panel */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Footer */
+.main-footer {
+    padding: 40px 5%;
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 0 3%;
+        backdrop-filter: none;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .main-nav {
+        display: none; /* Simple approach for now, can add a hamburger menu later */
+    }
+
+    .home-panel .main-title {
+        font-size: 2.5rem;
+    }
+
+    .panel h2 {
+        font-size: 2rem;
+    }
+} 

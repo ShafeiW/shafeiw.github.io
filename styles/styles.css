@@ -1,10 +1,3 @@
-@font-face {
-    font-family: 'Helmet';
-    src: url('Helmet-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* Basic Setup */
 :root {
     --primary-color: #000000;
@@ -13,7 +6,7 @@
     --panel-background: #ffffff;
     --header-height: 80px;
     --font-main: 'Inter', sans-serif;
-    --font-header: 'Helmet', sans-serif;
+    --font-header: 'Lora', serif;
 }
 
 * {
@@ -48,7 +41,7 @@ body.no-scroll {
     justify-content: center;
     align-items: center;
     padding: 0 5%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.005);
     backdrop-filter: blur(10px);
     z-index: 1100;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
@@ -72,9 +65,8 @@ body.no-scroll {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 1.6rem;
+    font-weight: 600;
     font-family: var(--font-header);
 }
 
@@ -345,6 +337,15 @@ body.no-scroll {
     font-weight: 400;
     color: var(--secondary-color);
     margin-bottom: 10px;
+}
+
+.experience-entry h4 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.experience-entry h4 a:hover {
+    text-decoration: underline;
 }
 
 /* Contact Panel */

@@ -117,6 +117,18 @@ body {
     opacity: 1;
 }
 
+.hamburger-menu {
+    display: none; /* Hidden on desktop */
+    z-index: 1100;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none; /* Hidden by default */
+}
+
 /* Main Content & Panels */
 .content-container {
     scroll-snap-type: y mandatory;
@@ -301,15 +313,105 @@ body {
         background-color: rgba(0, 0, 0, 0.8);
     }
     
-    .main-nav {
-        display: none; /* Simple approach for now, can add a hamburger menu later */
+    .main-nav, .social-nav {
+        display: none; /* Hide desktop navs on mobile */
     }
 
-    .home-panel .main-title {
-        font-size: 2.5rem;
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 2rem;
+        padding: 0;
     }
 
+    .hamburger-menu span {
+        width: 2rem;
+        height: 0.25rem;
+        background: var(--primary-color);
+        border-radius: 10px;
+        transition: all 0.3s linear;
+        position: relative;
+        transform-origin: 1px;
+    }
+
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--background-color);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1050;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .mobile-nav.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .mobile-nav ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    .mobile-nav li {
+        margin: 2rem 0;
+    }
+
+    .mobile-nav a {
+        font-size: 1.5rem;
+        font-family: var(--font-header);
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+    
+    .mobile-social-links {
+        display: flex;
+        gap: 30px;
+        margin-top: 2rem;
+    }
+
+    .mobile-social-links img {
+        height: 30px;
+        opacity: 0.8;
+    }
+
+    .header-content {
+        padding: 0 5%;
+    }
+    
+    .home-panel .main-title,
     .panel h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+
+    .home-panel .about-me-bio {
+        font-size: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 0 5%;
     }
 } 

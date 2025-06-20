@@ -408,20 +408,111 @@ body.no-scroll {
     .panel-content {
         padding-top: calc(var(--header-height) + 40px);
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
     }
-    
+
+    .home-panel .panel-content {
+        padding-top: 0;
+    }
+
     .home-panel .main-title,
     .panel h2 {
         font-size: 2.2rem;
         margin-bottom: 30px;
     }
 
+    .home-panel .main-title {
+        font-size: 2.8rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
     .home-panel .about-me-bio {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        max-width: 90%;
+        line-height: 1.6;
+    }
+
+    .home-panel .cta-button {
+        background: none;
+        border: none;
+        padding: 10px 0;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        font-weight: 400;
+    }
+
+    .home-panel .cta-button:hover {
+        background: none;
+        color: var(--secondary-color);
+    }
+
+    .projects-panel .panel-content,
+    .experience-panel .panel-content,
+    .contact-panel .panel-content {
+        padding-top: calc(var(--header-height) + 40px);
+        justify-content: flex-start;
     }
 
     .projects-grid {
-        grid-template-columns: 1fr;
-        padding: 0 5%;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px;
+        margin-bottom: -20px;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .projects-grid::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .projects-grid::-webkit-scrollbar-thumb {
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+    }
+
+    .project-card {
+        flex: 0 0 80vw;
+        scroll-snap-align: start;
+        margin-right: 20px;
+    }
+
+    .experience-timeline {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px;
+        margin-bottom: -20px;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .experience-timeline::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .experience-timeline::-webkit-scrollbar-thumb {
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+    }
+
+    .experience-entry {
+        flex: 0 0 80vw;
+        scroll-snap-align: start;
+        margin-right: 20px;
+        padding-bottom: 0;
+        border-bottom: none;
+        border-right: 1px solid #ddd;
+        padding-right: 20px;
+    }
+    
+    .experience-entry:last-child {
+        border-right: none;
+        margin-right: 0;
     }
 }
